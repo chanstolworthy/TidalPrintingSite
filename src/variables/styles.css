@@ -1,0 +1,8 @@
+:root {
+    --color-light-blue: #7FB3D5;
+    --color-blue: #5499C7;
+    --color-gray: #E5E8E8;
+
+    --tidal-btn-color-primary: var(--color-blue);
+    --tidal-btn-color-primary-hover: var(--color-light-blue);
+}
