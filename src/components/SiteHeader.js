@@ -31,10 +31,12 @@ const SiteHeader = () => {
                         <Logo src={tidal_logo} alt='logo'/>
                     </Link>
                     <NavWrapper>
-                        <Link to='/how-it-works'>How it works</Link>
-                        <Link to='/services'>Services</Link>
-                        <Link to='/contact-us'>Contact</Link>
-                        <Button>Get a Quote</Button>
+                        <a href='#tidal-home-how-it-works'>How it works</a>
+                        <a href='#tidal-home-services'>Services</a>
+                        <a href='#tidal-home-contact'>Contact</a>
+                        <Link to='/quote'>
+                            <Button>Get a Quote</Button>
+                        </Link>
                     </NavWrapper>
                 </Navbar>
             </header>

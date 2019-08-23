@@ -6,23 +6,24 @@ import track from '../../assets/track.svg'
 import stacked_cards from '../../assets/stacked_cards.png'
 import hero from '../../assets/hero.png'
 import styled from 'styled-components'
-import {Header, SubHeader} from "../../components/StyledComponents";
+import {Header, SubHeader, FlexCenterRowBetween, Button} from "../../components/StyledComponents";
 import HomeSection from "./HomeSection";
 import {SIDE_LEFT, SIDE_RIGHT} from "../../constants";
 import {colors} from "../../styles";
+import {Link} from "react-router-dom";
+import PopularProducts from "../../components/popular/PopularProducts";
 
 const backgroundBase = styled.img`
     position: absolute;
     top: 0;
     z-index: -1;
-    
 `;
 
 const SectionsWrapper = styled.div`
-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    alig-items: center;
+    align-items: center;
 `;
 
 const BackgroundRight = styled(backgroundBase)`
@@ -54,6 +55,10 @@ const Center = styled.div`
     justify-content: center;
 `;
 
+const QuoteLink = styled.div`
+margin: 24px;
+`;
+
 const header = 'Direct Mailing with Results';
 const subHeader = 'Customize, target and track your campaign like never before with our full service printing and mailing directly to your customer'
 
@@ -62,19 +67,31 @@ const steps = [
         image: stacked_cards,
         header: 'Choose your size and start customizing',
         side: SIDE_LEFT,
-        color: colors.blue
+        color: colors.blue,
+        subOne: 'ALL SIZES',
+        textOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+        subTwo: 'CUSTOMIZE + DESIGN',
+        textTwo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'
     },
     {
         image: map,
         header: 'Pick your audience and demographic',
         side: SIDE_RIGHT,
-        color: colors.green
+        color: colors.green,
+        subOne: 'DEMOGRAPHIC',
+        textOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+        subTwo: 'MAILING LIST',
+        textTwo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'
     },
     {
         image: track,
         header: 'Track your campaign and measure results',
         side: SIDE_LEFT,
-        color: colors.purple
+        color: colors.purple,
+        subOne: 'TRACKING',
+        textOne: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+        subTwo: 'CONVERSION RATES',
+        textTwo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'
     },
 ]
 
@@ -90,11 +107,15 @@ const HomeView = () => {
             <Center>
                 <HeroImage src={hero} alt='hero'/>
             </Center>
-            <SectionsWrapper>
+            <SectionsWrapper id='tidal-home-how-it-works'>
                 {
                     steps.map((s, i) => (
                         <HomeSection
                             key={i}
+                            subOne={s.subOne}
+                            textOne={s.textOne}
+                            subTwo={s.subTwo}
+                            textTwo={s.textTwo}
                             step={i + 1}
                             image={s.image}
                             header={s.header}
@@ -102,6 +123,17 @@ const HomeView = () => {
                             side={s.side}/>
                     ))
                 }
+                <FlexCenterRowBetween style={{maxWidth: '900px', margin: '36px 0'}}>
+                    <Header>Want bug results on your next campaign?</Header>
+                    <Link to='/quote'>
+                        <Button>Get a Quote</Button>
+                    </Link>
+                </FlexCenterRowBetween>
+
+                <Header id='tidal-home-services'>Popular products starting at</Header>
+                <PopularProducts/>
+                <QuoteLink>Don't see the size you are looking for? Get a custom quote.</QuoteLink>
+                <Header id='tidal-home-contact'>Contact</Header>
             </SectionsWrapper>
         </>
     )
