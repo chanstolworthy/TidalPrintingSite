@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/TidalPrintingSite/static/css/main.c59db92c.chunk.css",
+    "main.js": "/TidalPrintingSite/static/js/main.805c8037.chunk.js",
+    "main.js.map": "/TidalPrintingSite/static/js/main.805c8037.chunk.js.map",
+    "runtime~main.js": "/TidalPrintingSite/static/js/runtime~main.d21b5c2e.js",
+    "runtime~main.js.map": "/TidalPrintingSite/static/js/runtime~main.d21b5c2e.js.map",
+    "static/js/2.00c2dfff.chunk.js": "/TidalPrintingSite/static/js/2.00c2dfff.chunk.js",
+    "static/js/2.00c2dfff.chunk.js.map": "/TidalPrintingSite/static/js/2.00c2dfff.chunk.js.map",
+    "index.html": "/TidalPrintingSite/index.html",
+    "precache-manifest.d7bac79e8a275491f7f5f726815e7e4c.js": "/TidalPrintingSite/precache-manifest.d7bac79e8a275491f7f5f726815e7e4c.js",
+    "service-worker.js": "/TidalPrintingSite/service-worker.js",
+    "static/css/main.c59db92c.chunk.css.map": "/TidalPrintingSite/static/css/main.c59db92c.chunk.css.map",
+    "static/media/background_left.png": "/TidalPrintingSite/static/media/background_left.3cbee4eb.png",
+    "static/media/background_right.png": "/TidalPrintingSite/static/media/background_right.dbf52c0d.png",
+    "static/media/hero.png": "/TidalPrintingSite/static/media/hero.d2affb17.png",
+    "static/media/map.png": "/TidalPrintingSite/static/media/map.d14334dc.png",
+    "static/media/stacked_cards.png": "/TidalPrintingSite/static/media/stacked_cards.223f5d48.png",
+    "static/media/track.svg": "/TidalPrintingSite/static/media/track.68cd6371.svg"
+  }
+}
