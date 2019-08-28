@@ -14,6 +14,7 @@ margin: 2px 12px;
 `
 const PopularWrapper = styled.div`
 display: flex;
+flex-wrap: wrap;
 margin-top: 36px;
 width: 100%;
 justify-content: center;

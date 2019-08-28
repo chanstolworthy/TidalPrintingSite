@@ -12,6 +12,8 @@ import {SIDE_LEFT, SIDE_RIGHT} from "../../constants";
 import {colors} from "../../styles";
 import {Link} from "react-router-dom";
 import PopularProducts from "../../components/popular/PopularProducts";
+import AreasOfSuccess from "../../components/areasOfSuccess/AreasOfSuccess";
+import Reviews from "../../components/reviews/Reviews";
 
 const backgroundBase = styled.img`
     position: absolute;
@@ -45,6 +47,7 @@ const HeaderTextWrapper = styled.div`
     max-width: 700px;
     margin: auto;
     text-align: center;
+    padding: 0 36px;
 `;
 const HeroImage = styled.img`
     width: 100%;
@@ -133,6 +136,8 @@ const HomeView = () => {
                 <Header id='tidal-home-services'>Popular products starting at</Header>
                 <PopularProducts/>
                 <QuoteLink>Don't see the size you are looking for? Get a custom quote.</QuoteLink>
+                <AreasOfSuccess/>
+                <Reviews/>
                 <Header id='tidal-home-contact'>Contact</Header>
             </SectionsWrapper>
         </>
