@@ -7,7 +7,6 @@ const AreaComponentWrapper = styled.div`
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 900px;
     padding: 0 36px;
     margin: auto;
 `;

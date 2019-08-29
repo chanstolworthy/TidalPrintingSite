@@ -37,6 +37,7 @@ max-width: 400px;
 margin: 16px;
 border-radius: 6px;
 padding: 36px;
+box-sizing: border-box;
 `
 
 const cards = [

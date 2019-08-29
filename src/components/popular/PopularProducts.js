@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {colors} from "../../styles";
 import {Button, ButtonSecondary} from "../StyledComponents";
+import {Link} from "react-router-dom";
 
 const SelectionCard = styled.div`
 border: 1px solid ${({active}) => active ? colors.lightBlue : 'white'};
@@ -18,7 +19,6 @@ flex-wrap: wrap;
 margin-top: 36px;
 width: 100%;
 justify-content: center;
-max-width: 900px;
 `
 const ProductHeader = styled.div`
 font-size: 12px;
@@ -46,18 +46,12 @@ justify-content: center;
 width: 100%;
 `
 
-const PopularProducts = (props) => {
+const PopularProducts = () => {
     const POSTCARD = "POSTCARD";
     const DOOR_HANGER = "DOOR_HANGER";
     const NEWSLETTER = "NEWSLETTER";
     const MAGAZINE = "MAGAZINE";
 const optionsList = ['EDDM', 'Demographics', 'Mailing Lists', 'Design Support']
-
-    const [product, setProduct] = useState(POSTCARD)
-
-    const handleSetProduct = (type) => () => {
-        setProduct(type)
-    };
 
     const productList = [
         {
@@ -99,14 +93,14 @@ const optionsList = ['EDDM', 'Demographics', 'Mailing Lists', 'Design Support']
                     )
                 }
             </PopularHeader>
-            <SelectionCard active={product === productType}>
+            <SelectionCard active={popular}>
                 <ProductHeader>{title}</ProductHeader>
                 <Price>{price}</Price>
                 <div>{options.map((option, index)=> <Option key={index}>{option}</Option>)}</div>
-                {product === productType ? (
-                    <Button onClick={handleSetProduct(productType)}>Get Started</Button>
+                {popular ? (
+                    <Link to='/quote'><Button>Get Started</Button></Link>
                 ): (
-                    <ButtonSecondary onClick={handleSetProduct(productType)}>Get Started</ButtonSecondary>
+                    <Link to='/quote'><ButtonSecondary>Get Started</ButtonSecondary></Link>
                 )}
 
             </SelectionCard>

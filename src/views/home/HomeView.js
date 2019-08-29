@@ -14,6 +14,7 @@ import {Link} from "react-router-dom";
 import PopularProducts from "../../components/popular/PopularProducts";
 import AreasOfSuccess from "../../components/areasOfSuccess/AreasOfSuccess";
 import Reviews from "../../components/reviews/Reviews";
+import Footer from "../../components/footer/Footer";
 
 const backgroundBase = styled.img`
     position: absolute;
@@ -26,6 +27,9 @@ const SectionsWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 900px;
+    margin: auto;
+ 
 `;
 
 const BackgroundRight = styled(backgroundBase)`
@@ -60,6 +64,14 @@ const Center = styled.div`
 
 const QuoteLink = styled.div`
 margin: 24px;
+& a {
+text-decoration: none;
+color: ${colors.lightBlue};
+}
+`;
+
+const Padder = styled.div`
+padding: 24px;
 `;
 
 const header = 'Direct Mailing with Results';
@@ -127,7 +139,7 @@ const HomeView = () => {
                     ))
                 }
                 <FlexCenterRowBetween style={{maxWidth: '900px', margin: '36px 0'}}>
-                    <Header>Want bug results on your next campaign?</Header>
+                    <Header>Want big results on your next campaign?</Header>
                     <Link to='/quote'>
                         <Button>Get a Quote</Button>
                     </Link>
@@ -135,10 +147,16 @@ const HomeView = () => {
 
                 <Header id='tidal-home-services'>Popular products starting at</Header>
                 <PopularProducts/>
-                <QuoteLink>Don't see the size you are looking for? Get a custom quote.</QuoteLink>
+                <QuoteLink>Don't see the size you are looking for? Get a <Link to='/quote'>custom quote</Link>.</QuoteLink>
                 <AreasOfSuccess/>
                 <Reviews/>
-                <Header id='tidal-home-contact'>Contact</Header>
+                <FlexCenterRowBetween style={{maxWidth: '900px', margin: '36px 0'}}>
+                    <Header>Ready to get started?</Header>
+                    <Link to='/quote'>
+                        <Button>Get a Quote</Button>
+                    </Link>
+                </FlexCenterRowBetween>
+                <Footer/>
             </SectionsWrapper>
         </>
     )
